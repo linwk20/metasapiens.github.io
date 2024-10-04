@@ -25,7 +25,7 @@ const videoScenes = [
 ];
 
 const labels = [
-  'Mini-Splatting-D',
+  'Mini-D',
   'Our-L1',
   'Our-FR',
   'Our-L2',
