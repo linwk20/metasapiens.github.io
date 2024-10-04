@@ -339,8 +339,8 @@ body {
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: repeat(2, auto);  /* 2 rows */
   gap: 10px; /* Space between the videos */
-  padding-left: 370px; /* Space on the left */
-  padding-right: 370px; /* Space on the right */
+  padding-left: 22%; /* Space on the left */
+  padding-right: 21%; /* Space on the right */
 }
 
 .video-item {
@@ -360,8 +360,8 @@ body {
 }
 .explanation {
   font-size: 1.0em; /* Increase the font size */
-  margin-left: 370px; /* Space on the left */
-  margin-right: 370px; /* Space on the right */
+  margin-left: 22%; /* Space on the left */
+  margin-right: 21%; /* Space on the right */
   margin-bottom: 20px; /* Space between the explanation and the video grid */
   text-align: left; /* Align text to the left */
   color: black;
