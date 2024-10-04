@@ -406,20 +406,19 @@ button:active {
 
 button#prev::before {
   content: '← '; /* Unicode left arrow */
-  font-size: 1.2em; /* Make the arrow larger */
-  margin-right: 10px; /* Space between arrow and text */
+  font-size: 120%; /* Make the arrow larger */
+  margin-right: 5%; /* Space between arrow and text */
 }
 
 button#next::after {
   content: ' →'; /* Unicode right arrow */
-  font-size: 1.2em; /* Make the arrow larger */
-  margin-left: 10px; /* Space between text and arrow */
+  font-size: 120%; /* Make the arrow larger */
+  margin-left: 5%; /* Space between text and arrow */
 }
-
 
 button#play::before {
   content: '▶ '; /* Unicode play icon */
-  font-size: 1.2em; /* Make the play icon larger */
-  margin-right: 10px; /* Space between icon and text */
+  font-size: 120%; /* Make the play icon larger */
+  margin-right: 5%; /* Space between icon and text */
 }
 
