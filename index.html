@@ -59,9 +59,9 @@
 
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container">
         <div class="columns is-centered">
-          <div class="column has-text-centered">
+          <div class="column has-text-centered" >
             <h1 class="title is-1 publication-title"><span
                 style="color: #db8215 ;font-weight: bolder;">MetaSapiens:</span> Real-Time Neural Rendering with Efficiency-Aware Pruning and Accelerated Foveated Rendering</h1>
             <div class="is-size-5 publication-authors">
@@ -169,11 +169,11 @@
   <h2 class="title is-3" style="text-align: center;">Video Comparisons</h2>
   <div class="explanation">
     <p>
-      The first row shows a comparison between the Dense Model (Mini-Splatting-D [Fang 2024]) and our method, which includes Our-L1 (Pruned Version) 
+      The first row shows a comparison between the Dense Model (<a href="https://arxiv.org/pdf/2403.14166" target="_blank">Mini-Splatting-D [Fang 2024]</a>) and our method, which includes Our-L1 (Pruned Version) 
       and FR (Foveated Rendering). We also display the L2~L4 used in FR in the second row. All videos are fixed to 90 FPS for comparison.
     </p>
-    <p>Note:</p>
-    <ul style="list-style-type: disc; padding-left: 50px;">
+    <p><strong>- Note:</strong></p>
+    <ul style="list-style-type: disc; padding-left: 70px;">
       <li>FPS in the parentheses is measured on mobile device - Jetson Xavier.</li>
       <li>FR fixes the user's gaze at the center of the red circle.</li>
       <li>Use Play All Videos botton to synchronize videos.</li>
@@ -182,6 +182,13 @@
     
     
   </div>
+
+  <div class="controls">
+    <button id="prev" onclick="switchGroup(-1)">Switch Scene</button>
+    <button id="play" onclick="playAllVideos()"> Play All Videos</button>
+    <button id="next" onclick="switchGroup(1)">Switch Scene</button>
+  </div>
+
   <div class="video-grid">
     <div class="video-item">
       <video controls muted loop playsinline>
@@ -221,12 +228,7 @@
     </div>
   </div>
   
-  
-  <div class="controls">
-    <button id="prev" onclick="switchGroup(-1)">Switch Scene</button>
-    <button id="play" onclick="playAllVideos()"> Play All Videos</button>
-    <button id="next" onclick="switchGroup(1)">Switch Scene</button>
-  </div>
+
 
 
   <section class="section">
@@ -257,7 +259,7 @@
         <h2 class="title is-3">Image Comparisons</h2>
         <div class="content has-text-justified">
           <p>
-            The comparison between our method and Mini-Splatting-D [Fang 2024] is shown below. FPS is averaged over the test poses, measured on Jetson Xavier.
+            The comparison between our method and <a href="https://arxiv.org/pdf/2403.14166" target="_blank">Mini-Splatting-D [Fang 2024]</a> is shown below. FPS is averaged over the test poses, measured on Jetson Xavier.
 
           </p>
         </div>
