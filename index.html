@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-55V1E709SK');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description"
+    content="MetaSapiens: Real-Time Neural Rendering with Efficiency-Aware Pruning and Accelerated Foveated Rendering">
+  <meta name="keywords" content="Gaussian Splatting, Gaussian, LightGaussian, Foveated Rendering, Pruning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetaSapiens: Real-Time Neural Rendering with Efficiency-Aware Pruning and Accelerated Foveated Rendering
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+  <script src="./static/js/switch.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span
+                style="color: #db8215 ;font-weight: bolder;">MetaSapiens:</span> Real-Time Neural Rendering with Efficiency-Aware Pruning and Accelerated Foveated Rendering</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">  
+                <a href="https://linwk20.github.io/"  target="_blank">Weikai Lin</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://jhc.sjtu.edu.cn/people/members/faculty/yu-feng.html"  target="_blank">Yu Feng</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://yuhaozhu.com/"  target="_blank">Yuhao Zhu</a><sup>1</sup>,</span>
+              <span class="author-block">
+          </div>
+
+          <!-- affiliations -->
+          <div class="subtitle is-size-5">
+          <!-- <div class="is-size-5 publication-authors"> -->
+            <sup>1</sup> University of Rochester &nbsp;
+            <sup>2</sup> Shanghai Jiao Tong University <br>
+            <!-- <sup>*</sup> Equal Contribution -->
+            <!-- <sup>&dagger;</sup> Project Leader -->
+
+          </div>
+
+          <!-- TODO: update paper and video link once upload -->
+          <div class="column has-text-centered">
+            <!-- <div class="publication-links"> -->
+              <!-- PDF Link. -->
+            <span class="link-block">
+              <!-- TODO: update paper and video link once upload -->
+              <a href="" 
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper (Coming Soon)</span>
+              </a>
+            </span>
+
+            <!-- <span class="link-block">
+              <a href="https://arxiv.org/abs/2403.20309"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=fxf_ypd7eD8" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/horizon-research/Fov-3DGS"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Demo Link. -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/kairunwen/InstantSplat"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗 Demo</span>
+                </a>
+              </span> -->
+            </div>
+
+
+          <!-- Video Link. -->
+          <!-- <span class="link-block">
+                  <a href="https://youtu.be/470hul75bSM" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a> -->
+          </span>
+          <!-- Code Link. -->
+          <!-- <span class="link-block">
+                  <a href="https://github.com/VITA-Group/Instantsplat"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <h2 class="title is-3" style="text-align: center;">Video Comparisons</h2>
+  <div class="explanation">
+    <p>
+      The first row shows a comparison between the Dense Model (Mini-Splatting-D [Fang 2024]) and our method, which includes Our-L1 (Pruned Version) 
+      and FR (Foveated Rendering). We also display the L2~L4 used in FR in the second row. All videos are fixed to 90 FPS for comparison.
+    </p>
+    <p>Note:</p>
+    <ul style="list-style-type: disc; padding-left: 50px;">
+      <li>FPS in the parentheses is measured on mobile device - Jetson Xavier.</li>
+      <li>FR fixes the user's gaze at the center of the red circle.</li>
+      <li>Use Play All Videos botton to synchronize videos.</li>
+      <li>Videos here are downsampled and compressed. The original version (1.2GB) can be downloaded <a href="https://drive.google.com/file/d/1evSrCatn822WNsvhfhftatSjOOya_cl1/view?usp=sharing">here</a>.</li>
+    </ul>
+    
+    
+  </div>
+  <div class="video-grid">
+    <div class="video-item">
+      <video controls muted loop playsinline>
+        <source src="./static/videos/bicycle_miniD.mp4" type="video/mp4">
+      </video>
+      <p class="video-label" id="label-left-top">Mini-Splatting-D (12 FPS)</p>
+    </div>
+    <div class="video-item">
+      <video controls muted loop playsinline>
+        <source src="./static/videos/bicycle_L1.mp4" type="video/mp4">
+      </video>
+      <p class="video-label" id="label-middle-top">Our-L1 (60 FPS)</p>
+    </div>
+    <div class="video-item">
+      <video controls muted loop playsinline>
+        <source src="./static/videos/bicycle_FR.mp4" type="video/mp4">
+      </video>
+      <p class="video-label" id="label-right-top">Our-FR (85 FPS)</p>
+    </div>
+    <div class="video-item">
+      <video controls muted loop playsinline>
+        <source src="./static/videos/bicycle_L2.mp4" type="video/mp4">
+      </video>
+      <p class="video-label" id="label-left-bottom">Our-L2</p>
+    </div>
+    <div class="video-item">
+      <video controls muted loop playsinline>
+        <source src="./static/videos/bicycle_L3.mp4" type="video/mp4">
+      </video>
+      <p class="video-label" id="label-middle-bottom">Our-L3</p>
+    </div>
+    <div class="video-item">
+      <video controls muted loop playsinline>
+        <source src="./static/videos/bicycle_L4.mp4" type="video/mp4">
+      </video>
+      <p class="video-label" id="label-right-bottom">Our-L4</p>
+    </div>
+  </div>
+  
+  
+  <div class="controls">
+    <button id="prev" onclick="switchGroup(-1)">Switch Scene</button>
+    <button id="play" onclick="playAllVideos()"> Play All Videos</button>
+    <button id="next" onclick="switchGroup(1)">Switch Scene</button>
+  </div>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/teaser.png">
+
+            <p><strong>Our Foveated Rendering</strong>. In addition to introducing Computation-Aware Pruning, we further enhance rendering efficiency by employing Multi-Versioning-based Foveated Rendering (left image), leveraging human perceptual characteristics. A user study conducted in VR verifies the final quality.
+              The right image compares the Quality-FPS trade-off, measured using the objective metric PSNR and Jetson Xavier, between our method and other approaches.</p>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+  
+  
+  <section class="section">
+    <div class="container is-max-desktop ">
+      <div class=" has-text-centered">
+        <h2 class="title is-3">Image Comparisons</h2>
+        <div class="content has-text-justified">
+          <p>
+            The comparison between our method and Mini-Splatting-D [Fang 2024] is shown below. FPS represents the average value of the traces test poses, tested on Jetson Xavier.
+
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div id="example1" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/comparison_n/bicycle/bicycle3_our.png">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        Our-L1 <br> (60 FPS)
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="./static/images/comparison_n/bicycle/bicycle3_md.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Mini-D [Fang 2024] <br> (12 FPS)
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+                  <div id="example2" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/comparison_n/truck/truck31_our.png">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        Our-L1 <br> (121 FPS)
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="./static/images/comparison_n/truck/truck31_md.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Mini-D [Fang 2024]  <br> (13 FPS)
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+
+                  <div id="example3" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/comparison_n/garden/garden15_our.png">
+                      <div class="bal-afterPosition afterLabel">
+                        Our-L1  <br> (57 FPS)
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="./static/images/comparison_n/garden/garden15_md.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Mini-D [Fang 2024] <br> (10 FPS)
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--/ Visual Effects. -->
+
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+
+                <div id="example4" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/comparison_n/room/room0_our.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Our-L1  <br> (72 FPS)
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:62.10191082802548%;">
+                    <div class="bal-before-inset" style="width: 512px;">
+                      <img src="./static/images/comparison_n/room/room0_md.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        Mini-D [Fang 2024] <br> (13 FPS)
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:62.10191082802548%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+
+                <div id="example5" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/comparison_n/dr/dr0_our.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Our-L1 <br> (99 FPS)
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:56.77179962894249%;">
+                    <div class="bal-before-inset" style="width: 512px;">
+                      <img src="./static/images/comparison_n/Barn/dr0_md.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        Mini-D [Fang 2024] <br> (21 FPS)
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:56.77179962894249%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+                <div id="example6" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/comparison_n/kitchen/kitchen14_our.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Our-L1 <br> (52 FPS)
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:56.77179962894249%;">
+                    <div class="bal-before-inset" style="width: 512px;">
+                      <img src="./static/images/comparison_n/kitchen/kitchen14_md.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        Mini-D [Fang 2024] <br> (8 FPS)
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:56.77179962894249%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  
+ 
+
+  <script>
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+    new BeforeAfter({
+      id: '#example3'
+    });
+    new BeforeAfter({
+      id: '#example4'
+    });
+    new BeforeAfter({
+      id: '#example5'
+    });
+    new BeforeAfter({
+      id: '#example6'
+    });
+
+
+  </script>
+
+  <!-- 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Needs update
+          </p>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+Coming Soon.
+<!--       <pre><code>@misc{fan2024instantsplat,
+        title={InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds}, 
+        author={Zhiwen Fan and Wenyan Cong and Kairun Wen and Kevin Wang and Jian Zhang and Xinghao Ding and Danfei Xu and Boris Ivanovic and Marco Pavone and Georgios Pavlakos and Zhangyang Wang and Yue Wang},
+        year={2024},
+        eprint={2403.20309},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+      }</code></pre> -->
+    </div>
+  </section>
+  
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <!-- <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i> -->
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We thank the authors of <a href="https://instantsplat.github.io/">InstantSplat</a> that kindly open sourced the
+              template of this website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
